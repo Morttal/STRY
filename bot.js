@@ -5,7 +5,7 @@ var client = new Discord.Client();
 client.on('ready', () => {
   console.log(`Welcome Bro ${client.user.tag}!`);
 });
-var prefix = '-'
+var prefix = ','
 
 client.on('message', message => {
   if (!message.content.startsWith(prefix)) return;
@@ -42,7 +42,7 @@ if (message.content.startsWith(prefix + 'avatar')) {
 if (message.content.startsWith(prefix + 'set')) {
   client.user.setGame(argresult, "https://www.twitch.tv/peery13");
      console.log('test' + argresult);
-    message.channel.sendMessage(`Logic Streaming: ${argresult}`)
+    message.channel.sendMessage(`Morttal Streaming: ${argresult}`)
 } 
 if (message.content.startsWith(prefix + 'ply')) {
   client.user.setGame(argresult);
